@@ -1,0 +1,27 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+  main {
+    color: black;
+  }
+  
+  footer {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .titular-marca{
+    text-decoration: none;
+    color: inherit;
+    }
+
+  .h2-tag{
+    color: #525455;
+  }
+  
