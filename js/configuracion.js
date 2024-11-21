@@ -79,10 +79,19 @@ document.getElementById('configuracionLink').addEventListener('click', () => {
             <div class="text-start">
                 <label for="rateSlider">Velocidad:</label>
                 <input type="range" id="rateSlider" min="-0.9" max="1.2" step="0.1" value="1">
+                <div style="display:flex;flex-direction:row;width:55%;justify-content:space-around;margin-left:20px">
+                    <p>-1</p>
+                    <p>2</p>
+                </div>
             </div>
             <div class="text-start">
                 <label for="pitchSlider">Tono:</label>
                 <input type="range" id="pitchSlider" min="-0.9" max="1.2" step="0.1" value="1">
+                                <div style="display:flex;flex-direction:row;width:45%;justify-content:space-around">
+                    <p>-1</p>
+                    <p>2</p>
+                </div>
+
             </div>
             <div class="text-center mt-3">
                 <button id="saveConfigBtn" class="btn btn-primary">Guardar configuración</button>
