@@ -1,14 +1,14 @@
-const apiUrl = 'https://66ff18222b9aac9c997e3f80.mockapi.io/TaskManager'; // Cambia con la URL de tu API
+const apiUrl = 'https://66ff18222b9aac9c997e3f80.mockapi.io/TaskManager'; 
 
 async function fetchTasks() {
     try {
         const response = await fetch(apiUrl);
         const tasks = await response.json();
 
-        tasks.sort((a, b) => new Date(b.date) - new Date(a.date));
+        tasks.sort((a, b) => new Date(b.fechaCreacion) - new Date(a.fechaCreacion));
 
-        const notCompletedTasks = tasks.filter(task => !task.completed);
-        const completedTasks = tasks.filter(task => task.completed);
+        const notCompletedTasks = tasks.filter(task => !task.estado);
+        const completedTasks = tasks.filter(task => task.estado);
 
         const tasksList = document.getElementById('tasks-list');
         tasksList.innerHTML = '';
@@ -58,11 +58,11 @@ async function fetchTasks() {
                 playTaskAudio(title, detail);
             });
         });
-            } catch (error) {
+
+    } catch (error) {
         console.error('Error fetching tasks:', error);
     }
 }
-
 
 window.onload = fetchTasks;
 
