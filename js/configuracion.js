@@ -82,7 +82,7 @@ document.getElementById('configuracionLink').addEventListener('click', () => {
             </div>
             <div class="text-start">
                 <label for="pitchSlider">Tono:</label>
-                <input type="range" id="pitchSlider" min="-0.9" max="2.2" step="0.1" value="1">
+                <input type="range" id="pitchSlider" min="-0.9" max="1.2" step="0.1" value="1">
             </div>
             <div class="text-center mt-3">
                 <button id="saveConfigBtn" class="btn btn-primary">Guardar configuración</button>
